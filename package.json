@@ -1,0 +1,16 @@
+{
+  "name": "ranjna-backend",
+  "version": "1.0.0",
+  "description": "Production-grade e-commerce backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+
+  "keywords": [
+    "Ecommerce"
+  ],
+  "author": "Sudhanshu kumar",
+  "license": "ISC"
+}
