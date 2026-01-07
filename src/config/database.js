@@ -10,7 +10,7 @@
 import mongoose from "mongoose";
 import { env } from "./env.js";
 
-export async function connectDatabase() {
+export async function connectMongo() {
   try {
     mongoose.set("strictQuery", true);
 
@@ -23,5 +23,14 @@ export async function connectDatabase() {
   } catch (error) {
     console.error("❌ MongoDB connection failed:", error.message);
     process.exit(1);
+  }
+}
+
+export async function disconnectMongo() {
+  try {
+    await mongoose.connection.close();
+    console.log("✅ MongoDB disconnected");
+  } catch (error) {
+    console.error("❌ Error disconnecting MongoDB:", error.message);
   }
 }

@@ -14,7 +14,7 @@ import morgan from "morgan";
 
 import { env } from "./config/env.js";
 
-export function createApp() {
+function createApp() {
   const app = express();
 
   /* ----------------------------------
@@ -74,3 +74,5 @@ export function createApp() {
 
   return app;
 }
+
+export default createApp;
