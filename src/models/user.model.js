@@ -25,6 +25,13 @@ const userSchema = new mongoose.Schema(
       index: true,
     },
 
+    clerkId: {
+      type: String,
+      unique: true,
+      sparse: true,
+      index: true,
+    },
+
     password: {
       type: String,
       minlength: 8,

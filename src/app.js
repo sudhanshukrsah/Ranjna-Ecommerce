@@ -13,6 +13,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 
 import { env } from "./config/env.js";
+import apiRoutes from "./routes/index.js";
 
 function createApp() {
   const app = express();
@@ -56,6 +57,11 @@ function createApp() {
       timestamp: new Date().toISOString(),
     });
   });
+
+  /* ----------------------------------
+   * API Routes
+   * ---------------------------------- */
+  app.use("/api/v1", apiRoutes);
 
   /* ----------------------------------
    * 404 Handler (Unknown Routes)

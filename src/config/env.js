@@ -41,4 +41,8 @@ export const env = {
   // Payments (Razorpay)
   RAZORPAY_KEY_ID: requireEnv("RAZORPAY_KEY_ID"),
   RAZORPAY_KEY_SECRET: requireEnv("RAZORPAY_KEY_SECRET"),
+
+  // Clerk Authentication
+  CLERK_PUBLISHABLE_KEY: requireEnv("CLERK_PUBLISHABLE_KEY"),
+  CLERK_SECRET_KEY: requireEnv("CLERK_SECRET_KEY"),
 };
