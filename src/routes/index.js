@@ -1,5 +1,7 @@
 import express from "express";
 import userRoutes from "../modules/user/user.routes.js";
+import addressRoutes from "../modules/address/address.routes.js";
+import orderRoutes from "../modules/order/order.routes.js";
 
 const router = express.Router();
 
@@ -14,5 +16,7 @@ router.get("/health", (req, res) => {
 });
 
 router.use("/users", userRoutes);
+router.use("/addresses", addressRoutes);
+router.use("/orders", orderRoutes);
 
 export default router;
